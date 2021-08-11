@@ -2,7 +2,7 @@
  *  Copyright (c) Microsoft Corporation. All rights reserved.
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-
+let memoizeId = 5;
 export function createMemoizer() {
 	const memoizeKeyPrefix = `$memoize${memoizeId++}`;
 	let self: any = undefined;
