@@ -3,27 +3,6 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-export function createDecorator(mapFn: (fn: Function, key: string) => Function): Function {
-	return (target: any, key: string, descriptor: any) => {
-		let fnKey: string | null = null;
-		let fn: Function | null = null;
-
-		if (typeof descriptor.value === 'function') {
-			fnKey = 'value';
-			fn = descriptor.value;
-		} else if (typeof descriptor.get === 'function') {
-			fnKey = 'get';
-			fn = descriptor.get;
-		}
-
-		if (!fn) {
-			throw new Error('not supported');
-		}
-
-		descriptor[fnKey!] = mapFn(fn, key);
-	};
-}
-
 let memoizeId = 0;
 export function createMemoizer() {
 	const memoizeKeyPrefix = `$memoize${memoizeId++}`;
