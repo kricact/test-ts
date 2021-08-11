@@ -4,6 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 import {createMemoizer} from "./decorators";
+let value33 = 20;
 
 console.log(createMemoizer);
 
