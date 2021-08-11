@@ -610,8 +610,6 @@ export namespace Color {
                     case CharCode.D: return 13;
                     case CharCode.e: return 14;
                     case CharCode.E: return 14;
-                    case CharCode.f: return 15;
-                    case CharCode.F: return 15;
                 }
                 return 0;
             }
