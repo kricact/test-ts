@@ -3,7 +3,6 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
-let memoizeId = 0;
 export function createMemoizer() {
 	const memoizeKeyPrefix = `$memoize${memoizeId++}`;
 	let self: any = undefined;
