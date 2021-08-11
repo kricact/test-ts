@@ -3,6 +3,10 @@
  *  Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
 
+import {createMemoizer} from "./decorators";
+
+console.log(createMemoizer);
+
 export interface ErrorListenerCallback {
 	(error: any): void;
 }

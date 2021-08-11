@@ -131,3 +131,7 @@ export function throttle<T>(delay: number, reducer?: IDebounceReducer<T>, initia
 		};
 	});
 }
+function createDecorator(arg0: (fn: any, key: any) => (this: any, ...args: any[]) => void): Function {
+    throw new Error("Function not implemented.");
+}
+
